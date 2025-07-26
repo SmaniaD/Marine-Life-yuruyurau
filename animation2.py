@@ -1,5 +1,5 @@
 # This is part a collection of Python code to create animations based on the
-# Mathematica code posted by @yuruyurau in X.com. The code by yuruyurau was
+# Javascript code posted by @yuruyurau in X.com. The code by yuruyurau was
 # converted to Python using ChatGPt and Co-pilot. Please give the full credit to yuruyurau.
 # This code creates mesmerizing animations of sea-like creatures from a
 # combination of mathematical functions.
