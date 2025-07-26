@@ -3,5 +3,5 @@ code post by [@yuruyurau](https://x.com/yuruyurau) (X.com). The code by yuruyura
 as converted to Python using ChatGPt and Co-pilot. Please give the full credit to 
 yuruyurau. 
 
-These pde  criates mesmerazing animations of  sea-like creatures from a  combinatiion of 
+This code  criates mesmerazing animations of  sea-like creatures from a  combinatiion of 
 mathematical functions.
