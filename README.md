@@ -5,3 +5,5 @@ yuruyurau.
 
 This code  criates mesmerazing animations of  sea-like creatures from a  combinatiion of 
 mathematical functions.
+
+[](https://github.com/SmaniaD/Marine-Life-yuruyurau/blob/main/yuruyurau3.gif)
