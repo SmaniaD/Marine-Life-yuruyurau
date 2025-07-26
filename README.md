@@ -3,7 +3,7 @@ code posted by [@yuruyurau](https://x.com/yuruyurau) (X.com). The code by yuruyu
 was converted to Python using ChatGPt and Co-Pilot. Please give the full credit to 
 yuruyurau. 
 
-This code  criates mesmerazing animations of  sea-like creatures from a  combinatiion of 
+This code  creates mesmerazing animations of  sea-like creatures from a  combinatiion of 
 mathematical functions.
 
 ![](https://github.com/SmaniaD/Marine-Life-yuruyurau/blob/main/yuruyurau3.gif)
