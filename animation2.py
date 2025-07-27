@@ -40,6 +40,23 @@ def animate(frame):
     colors = plt.cm.viridis(norm(c))
     sc.set_offsets(np.c_[x, y])
     sc.set_color(colors)
+    # Show credits only in the first 2 seconds (i.e., first 60 frames at 30 fps)
+    if frame < 60:
+        if not hasattr(animate, "credit_text"):
+            animate.credit_text = fig.text(
+                0.01, 0.01,
+                "Credit: based on code by @yuruyurau (X.com)",
+                color='white',
+                fontsize=8,
+                ha='left',
+                va='bottom',
+                alpha=0.7
+            )
+        else:
+            animate.credit_text.set_visible(True)
+    else:
+        if hasattr(animate, "credit_text"):
+            animate.credit_text.set_visible(False)
     return sc,
 
 parser = argparse.ArgumentParser(description="Animate sea-like creatures.")

@@ -33,10 +33,29 @@ ax.set_xlim(70, 330)
 ax.set_ylim(30, 350)
 ax.axis('off')
 
+
 def animate(frame):
     t = frame / 60.0  # adjust speed here
     x, y = compute_points(t)
     sc.set_offsets(np.c_[x, y])
+    # Add credits text in the bottom left corner
+    # Show credits only in the first 2 seconds (i.e., first 120 frames at 60 fps)
+    if frame < 60:
+        if not hasattr(animate, "credit_text"):
+            animate.credit_text = fig.text(
+                0.01, 0.01,
+                "Credit: based on code by @yuruyurau (X.com)",
+                color='white',
+                fontsize=8,
+                ha='left',
+                va='bottom',
+                alpha=0.7
+            )
+        else:
+            animate.credit_text.set_visible(True)
+    else:
+        if hasattr(animate, "credit_text"):
+            animate.credit_text.set_visible(False)
     return sc,
 
 parser = argparse.ArgumentParser(description="Animate sea-like creatures.")
@@ -46,9 +65,10 @@ parser.add_argument('--mp4', action='store_true', help='Save animation as MP4')
 args = parser.parse_args()
 
 ani = FuncAnimation(fig, animate, frames=args.frames, interval=30, blit=True)
-plt.show()
 
 if args.gif or (not args.mp4):
-	ani.save('yuruyurau1.gif', writer='pillow', fps=30)
+    ani.save('yuruyurau1.gif', writer='pillow', fps=30)
 if args.mp4:
-	ani.save("yuruyurau1.mp4", writer="ffmpeg", fps=30)
+    ani.save("yuruyurau1.mp4", writer="ffmpeg", fps=30)
+
+plt.show()
