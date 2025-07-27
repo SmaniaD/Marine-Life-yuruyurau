@@ -46,3 +46,4 @@ plt.show()
 
 # Save the animation as a GIF
 ani.save("yuruyurau2.gif", writer='pillow', fps=30)
+ani.save("yuruyurau2.mp4", writer="ffmpeg", fps=30)

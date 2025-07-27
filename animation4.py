@@ -43,3 +43,4 @@ ani = FuncAnimation(fig, animate, frames=180, interval=30, blit=True)
 plt.show()
 # Save the animation as an mp4 file
 ani.save('yuruyurau4.gif', writer='pillow', fps=30)
+ani.save("yuruyurau4.mp4", writer="ffmpeg", fps=30)
