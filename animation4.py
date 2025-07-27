@@ -7,6 +7,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+import argparse
 
 N = 10000
 x_vals = np.arange(N, 0, -1)
@@ -39,8 +40,18 @@ def animate(frame):
 	sc.set_offsets(np.c_[x, y])
 	return sc,
 
-ani = FuncAnimation(fig, animate, frames=180, interval=30, blit=True)
+parser = argparse.ArgumentParser(description="Animate sea-like creatures.")
+parser.add_argument('--frames', type=int, default=180, help='Number of animation frames')
+parser.add_argument('--gif', action='store_true', help='Save animation as GIF')
+parser.add_argument('--mp4', action='store_true', help='Save animation as MP4')
+args = parser.parse_args()
+
+ani = FuncAnimation(fig, animate, frames=args.frames, interval=30, blit=True)
 plt.show()
-# Save the animation as an mp4 file
-ani.save('yuruyurau4.gif', writer='pillow', fps=30)
-ani.save("yuruyurau4.mp4", writer="ffmpeg", fps=30)
+
+if args.gif or (not args.mp4):
+	ani.save('yuruyurau4.gif', writer='pillow', fps=30)
+if args.mp4:
+	ani.save("yuruyurau4.mp4", writer="ffmpeg", fps=30)
+
+
