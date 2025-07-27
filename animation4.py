@@ -64,11 +64,12 @@ parser.add_argument('--mp4', action='store_true', help='Save animation as MP4')
 args = parser.parse_args()
 
 ani = FuncAnimation(fig, animate, frames=args.frames, interval=30, blit=True)
-plt.show()
 
 if args.gif or (not args.mp4):
     ani.save('yuruyurau4.gif', writer='pillow', fps=30)
 if args.mp4:
     ani.save("yuruyurau4.mp4", writer="ffmpeg", fps=30)
+plt.show()    
+
 
 
