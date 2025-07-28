@@ -1,5 +1,6 @@
 This is a collection of Python code to create animations based on the Javascript
-code posted by [@yuruyurau](https://x.com/yuruyurau) (X.com). The code by yuruyurau
+code posted by [@yuruyurau](https://x.com/yuruyurau) (X.com). Check other wonderful
+animations there.  The code by yuruyurau
 was converted to Python using ChatGPt and Co-Pilot. Please give the full credit to 
 yuruyurau. 
 
